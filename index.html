@@ -4,38 +4,46 @@
     <title>World Cup Goal Exchange</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #0f172a;
-            color: white;
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: #e2e8f0;
         }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
+        .topbar {
+            background: #111827;
             padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #1f2937;
         }
 
-        h1 {
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 5px;
+        .title {
+            font-size: 34px;
+            font-weight: bold;
         }
 
         .subtitle {
-            text-align: center;
             color: #94a3b8;
-            margin-bottom: 30px;
+            margin-top: 5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         .card {
-            background: #1e293b;
+            background: #111827;
             padding: 20px;
-            margin-bottom: 15px;
             border-radius: 12px;
+            border: 1px solid #1f2937;
         }
 
-        h2 {
+        .card h2 {
             margin-top: 0;
             color: #38bdf8;
         }
@@ -44,22 +52,44 @@
             line-height: 1.8;
         }
 
+        .leaderboard {
+            grid-column: span 2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #1f2937;
+            text-align: left;
+        }
+
+        th {
+            color: #94a3b8;
+        }
+
         .chip {
             display: inline-block;
-            padding: 5px 10px;
+            background: #1f2937;
+            padding: 6px 10px;
             border-radius: 8px;
-            background: #334155;
             margin-right: 5px;
-            font-size: 14px;
+            font-size: 13px;
         }
+
     </style>
 </head>
 <body>
 
-<div class="container">
-
-    <h1>World Cup Goal Exchange</h1>
+<div class="topbar">
+    <div class="title">World Cup Goal Exchange</div>
     <div class="subtitle">Fantasy football meets the transfer market</div>
+</div>
+
+<div class="container">
 
     <div class="card">
         <h2>Rules</h2>
@@ -73,19 +103,39 @@
     </div>
 
     <div class="card">
+        <h2>Chips</h2>
+        <div class="chip">Clean Sheet</div>
+        <div class="chip">VAR Check</div>
+        <div class="chip">Extra Time</div>
+    </div>
+
+    <div class="card">
         <h2>How to Play</h2>
         <ul>
             <li>Pick 4 teams (1 per pot)</li>
-            <li>Track points each round</li>
+            <li>Track points across rounds</li>
             <li>Use 1 chip per round before matches</li>
         </ul>
     </div>
 
     <div class="card">
-        <h2>Chips</h2>
-        <span class="chip">Clean Sheet</span>
-        <span class="chip">VAR Check</span>
-        <span class="chip">Extra Time</span>
+        <h2>Current Round</h2>
+        <p>Round 1: Group Stage Matchday</p>
+        <p>Status: Live scoring not enabled yet</p>
+    </div>
+
+    <div class="card leaderboard">
+        <h2>Leaderboard</h2>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Example Player</td>
+                <td>0</td>
+            </tr>
+        </table>
     </div>
 
 </div>
